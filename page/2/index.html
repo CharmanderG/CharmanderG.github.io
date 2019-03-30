@@ -249,6 +249,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/holes/长图宽度撑满，长度自适应/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="light">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小火龙的部落格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/10/holes/长图宽度撑满，长度自适应/" itemprop="url">长图宽度撑满，长度自适应</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T11:04:22+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hole/" itemprop="url" rel="index">
+                    <span itemprop="name">hole</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:scaleType=&quot;fitXY&quot;</span><br><span class="line">android:adjustViewBounds=&quot;true&quot;</span><br></pre></td></tr></table></figure>
+<p>设置以上两个属性即可实现对应效果</p>
+<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">protected void onMeasure(intwidthMeasureSpec, intheightMeasureSpec) &#123;</span><br><span class="line"></span><br><span class="line">     Drawable d = getDrawable();</span><br><span class="line">     if (d != null) &#123;// ceil not round - avoid thin vertical gaps along the left/right edges//</span><br><span class="line">         int width = MeasureSpec.getSize(widthMeasureSpec);//高度根据使得图片的宽度充满屏幕计算而得</span><br><span class="line">         int height = (int) Math.ceil((float) width * (float) d.getIntrinsicHeight() / (float) d.getIntrinsicWidth());</span><br><span class="line"></span><br><span class="line">         setMeasuredDimension(width, height);</span><br><span class="line"></span><br><span class="line">     &#125; else &#123;</span><br><span class="line">         super.onMeasure(widthMeasureSpec, heightMeasureSpec);</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line">    </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>动态设置方式</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/tools/systrace使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -533,152 +678,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/tools/热修复相关/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="light">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小火龙的部落格">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/23/tools/热修复相关/" itemprop="url">热修复相关</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T10:42:44+08:00">
-                2018-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tool/" itemprop="url" rel="index">
-                    <span itemprop="name">Tool</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="热修复"><a href="#热修复" class="headerlink" title="热修复"></a>热修复</h1><h2 id="bugly-基于tinker-使用步骤"><a href="#bugly-基于tinker-使用步骤" class="headerlink" title="bugly 基于tinker 使用步骤"></a>bugly 基于tinker 使用步骤</h2><p>1、修改tingkerId，执行assembleRelease编译一个签名的apk</p>
-<p>2、将此apk安装至手机，并打开（打开后，会上报版本信息，版本信息会与后续补丁包关联）</p>
-<p>3、修改代码</p>
-<p>4、修改文件夹名，apk名，tingkerId，并执行buildTinkerPatchRelease,生成补丁包，将补丁包上传至bugly</p>
-<p>5、开始下发，启动apk后，杀死进程，重启apk，修复完成</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/life/杰尼龟们/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -865,6 +864,152 @@
 </tbody>
 </table>
 <h3 id="总计7只"><a href="#总计7只" class="headerlink" title="总计7只"></a>总计7只</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/tools/热修复相关/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="light">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小火龙的部落格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/23/tools/热修复相关/" itemprop="url">热修复相关</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T10:42:44+08:00">
+                2018-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index">
+                    <span itemprop="name">Tool</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="热修复"><a href="#热修复" class="headerlink" title="热修复"></a>热修复</h1><h2 id="bugly-基于tinker-使用步骤"><a href="#bugly-基于tinker-使用步骤" class="headerlink" title="bugly 基于tinker 使用步骤"></a>bugly 基于tinker 使用步骤</h2><p>1、修改tingkerId，执行assembleRelease编译一个签名的apk</p>
+<p>2、将此apk安装至手机，并打开（打开后，会上报版本信息，版本信息会与后续补丁包关联）</p>
+<p>3、修改代码</p>
+<p>4、修改文件夹名，apk名，tingkerId，并执行buildTinkerPatchRelease,生成补丁包，将补丁包上传至bugly</p>
+<p>5、开始下发，启动apk后，杀死进程，重启apk，修复完成</p>
+
           
         
       
@@ -1621,161 +1766,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/17/learn_summary/native-interact-with-webview/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="light">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小火龙的部落格">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/17/learn_summary/native-interact-with-webview/" itemprop="url">Native和Webview的交互</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T11:36:10+08:00">
-                2018-01-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Learning-Summary/" itemprop="url" rel="index">
-                    <span itemprop="name">Learning Summary</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Native和Webview的交互"><a href="#Native和Webview的交互" class="headerlink" title="Native和Webview的交互"></a>Native和Webview的交互</h1><h2 id="原生WebView与Javascript交互"><a href="#原生WebView与Javascript交互" class="headerlink" title="原生WebView与Javascript交互"></a>原生WebView与Javascript交互</h2><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="http://www.cnblogs.com/whoislcj/p/5980240.html" target="_blank" rel="noopener">http://www.cnblogs.com/whoislcj/p/5980240.html</a><br><a href="https://www.cnblogs.com/whoislcj/p/6104015.html" target="_blank" rel="noopener">https://www.cnblogs.com/whoislcj/p/6104015.html</a><br><a href="https://tech.youzan.com/jsbridge/" target="_blank" rel="noopener">https://tech.youzan.com/jsbridge/</a></p>
-<h3 id="1、WebView开启支持JavaScript"><a href="#1、WebView开启支持JavaScript" class="headerlink" title="1、WebView开启支持JavaScript"></a>1、WebView开启支持JavaScript</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mWebView.getSettings().setJavaScriptEnabled(true);</span><br></pre></td></tr></table></figure>
-<h3 id="2、简单的H5网页实现，主要实现actionFromNative-、actionFromNativeWithParam-String-str-，放在assets文件下"><a href="#2、简单的H5网页实现，主要实现actionFromNative-、actionFromNativeWithParam-String-str-，放在assets文件下" class="headerlink" title="2、简单的H5网页实现，主要实现actionFromNative()、actionFromNativeWithParam(String str)，放在assets文件下"></a>2、简单的H5网页实现，主要实现actionFromNative()、actionFromNativeWithParam(String str)，放在assets文件下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    function actionFromNative()&#123;</span><br><span class="line">         document.getElementById(&quot;log_msg&quot;).innerHTML +=</span><br><span class="line">             &quot;&lt;br\&gt;Native调用了js函数&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function actionFromNativeWithParam(arg)&#123;</span><br><span class="line">         document.getElementById(&quot;log_msg&quot;).innerHTML +=</span><br><span class="line">             (&quot;&lt;br\&gt;Native调用了js函数并传递参数：&quot;+arg);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;WebView与Javascript交互&lt;/p&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;button onClick=&quot;window.wx.actionFromJs()&quot;&gt;点击调用Native代码&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;br/&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;button onClick=&quot;window.wx.actionFromJsWithParam(&apos;come from Js&apos;)&quot;&gt;点击调用Native代码并传递参数&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;br/&gt;</span><br><span class="line">&lt;div id=&quot;log_msg&quot;&gt;调用打印信息&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="3、Native实现与JS交互函数：actionFromJs-、actionFromJsWithParam"><a href="#3、Native实现与JS交互函数：actionFromJs-、actionFromJsWithParam" class="headerlink" title="3、Native实现与JS交互函数：actionFromJs()、actionFromJsWithParam()"></a>3、Native实现与JS交互函数：actionFromJs()、actionFromJsWithParam()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends Activity &#123;</span><br><span class="line">    private WebView mWebView;</span><br><span class="line">    private TextView logTextView;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.main);</span><br><span class="line">        mWebView = (WebView) findViewById(R.id.webview);</span><br><span class="line">        // 启用javascript</span><br><span class="line">        mWebView.getSettings().setJavaScriptEnabled(true);</span><br><span class="line">        // 从assets目录下面的加载html</span><br><span class="line">        mWebView.loadUrl(&quot;file:///android_asset/wx.html&quot;);</span><br><span class="line">        mWebView.addJavascriptInterface(this, &quot;wx&quot;);</span><br><span class="line">        logTextView = (TextView) findViewById(R.id.text);</span><br><span class="line">        Button button = (Button) findViewById(R.id.button);</span><br><span class="line">        button.setOnClickListener(new Button.OnClickListener() &#123;</span><br><span class="line">            public void onClick(View v) &#123;</span><br><span class="line">                // 无参数调用</span><br><span class="line">                mWebView.loadUrl(&quot;javascript:actionFromNative()&quot;);</span><br><span class="line">                // 传递参数调用</span><br><span class="line">                mWebView.loadUrl(&quot;javascript:actionFromNativeWithParam(&quot; + &quot;&apos;come from Native&apos;&quot; + &quot;)&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @android.webkit.JavascriptInterface</span><br><span class="line">    public void actionFromJs() &#123;</span><br><span class="line">        runOnUiThread(new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                Toast.makeText(MainActivity.this, &quot;js调用了Native函数&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">                String text = logTextView.getText() + &quot;\njs调用了Native函数&quot;;</span><br><span class="line">                logTextView.setText(text);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @android.webkit.JavascriptInterface</span><br><span class="line">    public void actionFromJsWithParam(final String str) &#123;</span><br><span class="line">        runOnUiThread(new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                Toast.makeText(MainActivity.this, &quot;js调用了Native函数传递参数：&quot; + str, Toast.LENGTH_SHORT).show();</span><br><span class="line">                String text = logTextView.getText() +  &quot;\njs调用了Native函数传递参数：&quot; + str;</span><br><span class="line">                logTextView.setText(text);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>mWebView.addJavascriptInterface(this, “wx”);相当于添加一个js回调接口，然后给这个起一个别名，我这里起的名字wx（微信哈哈）。@android.webkit.JavascriptInterface为了解决addJavascriptInterface漏洞的，在4.2以后才有的。</p>
-<h3 id="4、代码简单解说"><a href="#4、代码简单解说" class="headerlink" title="4、代码简单解说"></a>4、代码简单解说</h3><p>（1.）js（HTML）访问Android（Java）端代码是通过jsObj对象实现的，调用jsObj对象中的函数，如： window.jsObj.actionFromJs()，这里的jsObj就是Native中添加接口的别名  </p>
-<p>（2.）Android（Java）访问js（HTML）端代码是通过loadUrl函数实现的，访问格式如：mWebView.loadUrl(“javascript:actionFromNative()”);</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h2 id="JSBridge"><a href="#JSBridge" class="headerlink" title="JSBridge"></a>JSBridge</h2><h3 id="javascript调用native方式"><a href="#javascript调用native方式" class="headerlink" title="javascript调用native方式"></a>javascript调用native方式</h3><h4 id="1-通过schema方式，使用shouldOverrideUrlLoading方法对url协议进行解析。这种js的调用方式与ios的一样，使用iframe来调用native代码。"><a href="#1-通过schema方式，使用shouldOverrideUrlLoading方法对url协议进行解析。这种js的调用方式与ios的一样，使用iframe来调用native代码。" class="headerlink" title="1.通过schema方式，使用shouldOverrideUrlLoading方法对url协议进行解析。这种js的调用方式与ios的一样，使用iframe来调用native代码。"></a>1.通过schema方式，使用shouldOverrideUrlLoading方法对url协议进行解析。这种js的调用方式与ios的一样，使用iframe来调用native代码。</h4><h4 id="2-通过在webview页面里直接注入原生js代码方式，使用addJavascriptInterface方法来实现。"><a href="#2-通过在webview页面里直接注入原生js代码方式，使用addJavascriptInterface方法来实现。" class="headerlink" title="2.通过在webview页面里直接注入原生js代码方式，使用addJavascriptInterface方法来实现。"></a>2.通过在webview页面里直接注入原生js代码方式，使用addJavascriptInterface方法来实现。</h4><p>在android里实现如下  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class JSInterface &#123;  </span><br><span class="line">    @JavascriptInterface //注意这个代码一定要加上</span><br><span class="line">    public String getUserData() &#123;</span><br><span class="line">        return &quot;UserData&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">webView.addJavascriptInterface(new JSInterface(), &quot;AndroidJS&quot;);</span><br></pre></td></tr></table></figure>
-<p>上面的代码就是在页面的window对象里注入了<code>AndroidJS</code>对象。在js里可以直接调用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(AndroidJS.getUserData()) //UserDate</span><br></pre></td></tr></table></figure>
-<h4 id="3-使用prompt-console-log-alert方式，这三个方法对js里是属性原生的，在android-webview这一层是可以重写这三个方法的。一般我们使用prompt，因为这个在js里使用的不多，用来和native通讯副作用比较少。"><a href="#3-使用prompt-console-log-alert方式，这三个方法对js里是属性原生的，在android-webview这一层是可以重写这三个方法的。一般我们使用prompt，因为这个在js里使用的不多，用来和native通讯副作用比较少。" class="headerlink" title="3.使用prompt,console.log,alert方式，这三个方法对js里是属性原生的，在android webview这一层是可以重写这三个方法的。一般我们使用prompt，因为这个在js里使用的不多，用来和native通讯副作用比较少。"></a>3.使用prompt,console.log,alert方式，这三个方法对js里是属性原生的，在android webview这一层是可以重写这三个方法的。一般我们使用prompt，因为这个在js里使用的不多，用来和native通讯副作用比较少。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class YouzanWebChromeClient extends WebChromeClient &#123;  </span><br><span class="line">    @Override</span><br><span class="line">    public boolean onJsPrompt(WebView view, String url, String message, String defaultValue, JsPromptResult result) &#123;</span><br><span class="line">        // 这里就可以对js的prompt进行处理，通过result返回结果</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public boolean onConsoleMessage(ConsoleMessage consoleMessage) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public boolean onJsAlert(WebView view, String url, String message, JsResult result) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Native调用javascript方式"><a href="#Native调用javascript方式" class="headerlink" title="Native调用javascript方式"></a>Native调用javascript方式</h3><p>在android里是使用webview的<code>loadUrl</code>进行调用的，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 调用js中的JSBridge.trigger方法</span><br><span class="line">webView.loadUrl(&quot;javascript:JSBridge.trigger(&apos;webviewReady&apos;)&quot;);</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1826,7 +1816,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

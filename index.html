@@ -249,6 +249,190 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/learn_summary/lru系列算法学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="light">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小火龙的部落格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/30/learn_summary/lru系列算法学习/" itemprop="url">lru系列算法学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T16:37:12+08:00">
+                2019-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Learning-Summary/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning Summary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="LRU系列学习"><a href="#LRU系列学习" class="headerlink" title="LRU系列学习"></a>LRU系列学习</h1><h2 id="LRU"><a href="#LRU" class="headerlink" title="LRU"></a>LRU</h2><table>
+<thead>
+<tr>
+<th>添加数据</th>
+<th>获取数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如缓存未满则直接添加至队头；如缓存已满则从队尾删除数据，添加新数据至队头</td>
+<td>将获取的数据移至队头</td>
+</tr>
+</tbody>
+</table>
+<h2 id="LRU-K"><a href="#LRU-K" class="headerlink" title="LRU-K"></a>LRU-K</h2><table>
+<thead>
+<tr>
+<th>添加数据</th>
+<th>获取数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同lru</td>
+<td>当某一数据命中次数达到k次，则将其放至缓存数据队列，缓存数据队列按时间顺序排列，每次缓存队列数据被访问后，重新排列，缓存数据满时，删除末尾数据</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2Q"><a href="#2Q" class="headerlink" title="2Q"></a>2Q</h2><table>
+<thead>
+<tr>
+<th>添加数据</th>
+<th>获取数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类似lru，数据结构变为fifo</td>
+<td>同lru-k</td>
+</tr>
+</tbody>
+</table>
+<h2 id="MQ"><a href="#MQ" class="headerlink" title="MQ"></a>MQ</h2><p>多队列结构，每条队列按lru进行处理，当某一数据访问次数到达一定数值，将其移至高优先级队列，当某一缓存数据即将被移除时，将其移至低优先级队列，需要淘汰数据时，从最低优先级队列进行lru淘汰，将数据移至Q-history，当Q-history中数据重新被请求时，会将该数据重新放入目标优先级队列头部，Q-history按lru进行淘汰。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/29/learn_summary/Arouter源码分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1557,151 +1741,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/holes/长图宽度撑满，长度自适应/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="light">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小火龙的部落格">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/10/holes/长图宽度撑满，长度自适应/" itemprop="url">长图宽度撑满，长度自适应</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T11:04:22+08:00">
-                2018-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hole/" itemprop="url" rel="index">
-                    <span itemprop="name">hole</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:scaleType=&quot;fitXY&quot;</span><br><span class="line">android:adjustViewBounds=&quot;true&quot;</span><br></pre></td></tr></table></figure>
-<p>设置以上两个属性即可实现对应效果</p>
-<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">protected void onMeasure(intwidthMeasureSpec, intheightMeasureSpec) &#123;</span><br><span class="line"></span><br><span class="line">     Drawable d = getDrawable();</span><br><span class="line">     if (d != null) &#123;// ceil not round - avoid thin vertical gaps along the left/right edges//</span><br><span class="line">         int width = MeasureSpec.getSize(widthMeasureSpec);//高度根据使得图片的宽度充满屏幕计算而得</span><br><span class="line">         int height = (int) Math.ceil((float) width * (float) d.getIntrinsicHeight() / (float) d.getIntrinsicWidth());</span><br><span class="line"></span><br><span class="line">         setMeasuredDimension(width, height);</span><br><span class="line"></span><br><span class="line">     &#125; else &#123;</span><br><span class="line">         super.onMeasure(widthMeasureSpec, heightMeasureSpec);</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line">    </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>动态设置方式</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1752,7 +1791,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
